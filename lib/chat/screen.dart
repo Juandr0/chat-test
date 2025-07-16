@@ -15,7 +15,7 @@ class ChatScreen extends StatelessWidget {
           appBar: AppBar(title: const Text('Chat UI Test')),
           body: Builder(
             builder: (context) {
-              // Problem 1: context.read only reads once. context.watch to subscribes for state changes.
+              // Problem 1: context.read only reads once. changed to context.watch which subscribes to state changes.
               final chatProvider = context.watch<ChatScreenController>();
               return Column(
                 children: [
